@@ -21,15 +21,15 @@ class MainViewController: FlutterViewController {
         (UIApplication.shared.delegate as! AppDelegate).flutterEngine = engine
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        engine?.viewController = self
-//        super.viewWillAppear(animated)
-//    }
-//    
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        engine?.viewController = nil
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        engine?.viewController = self
+        super.viewWillAppear(animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        engine?.viewController = nil
+    }
     
     func handler(call:FlutterMethodCall ,result: FlutterResult){
         if call.method == "jump" {

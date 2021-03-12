@@ -15,15 +15,15 @@ class SecondViewController: FlutterViewController {
         // Do any additional setup after loading the view.
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        engine?.viewController = self
-//        super.viewWillAppear(animated)
-//    }
-//
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        engine?.viewController = nil
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        engine?.viewController = self
+        super.viewWillAppear(animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        engine?.viewController = nil
+    }
     
 
     /*
